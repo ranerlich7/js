@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <button onclick="startClock()">START</button>
+    <button onclick="stopClock()">STOP</button>
+    <script>
+        let myId = -1
+        function startClock() {
+            if (myId === -1) {
+                myId = setInterval(refreshDate, 1000)
+                console.log('starting clock');
+            }
+        }
+        function stopClock() {
+            clearInterval(myId)
+            myId = -1
+            console.log('stopping clock');
+        }
+
+        let counter = 0
+        function refreshDate() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            display.innerHTML = `The time is ${hours}:${minutes}:${seconds}`
+            counter++;
+            // clear after 5 seconds
+            // counter === 5 && clearInterval(myId)
+
+        }
+        // setTimeout(refreshDate, 1000)
+        // myId = setInterval(refreshDate, 1000)
+
+
+
+        // console.log();
+    </script>
+</body>
+
+</html>

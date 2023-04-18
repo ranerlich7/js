@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create an array of 5 numbers
+        // Run map function on this array and return an array of num*num (squared)
+        // Use regular function
+        // Use arrow function
+
+        function squareNum(x) {
+            return x * x
+        }
+        // console.log(squareNum(5));
+
+        const numbers = [1, 10, 100, 7, 9]
+
+        // with function
+        result = numbers.map(squareNum) 
+        // with arrow function
+        result = numbers.map(x => x * x)
+        console.log(result);
+
+        result2 = numbers.map(x => x % 2 === 0 ? true : false)
+        console.log(result2);
+
+
+    </script>
+</body>
+
+</html>
