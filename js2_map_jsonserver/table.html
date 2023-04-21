@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" id="studentTable">
+    </table>
+    <script>
+        // const students = ["or", "uriel", "margalit", "daniel", "Ofer"]
+
+        const students = [{ name: "or", age: 25, email: "or@or.com", grades: [89, 90, 99] },
+        { name: "margalit", age: 24, email: "margalit@margalit.com", grades: [89, 89, 100] },
+        { name: "daniel", age: 22, email: "daniel@daniel.com", grades: [99, 95, 100] }
+        ]
+
+        const resultHTML = students.map(student => `<tr>
+            <td>${student.name}</td>
+            <td>${student.age}</td>
+            <td>${student.email}</td>
+            <td>${student.grades}</td>
+            </tr>`).join('');
+        studentTable.innerHTML = "<tr><th>Student</th><th>Age</th><th>Email</th></tr>" + resultHTML;
+
+    </script>
+</body>
+
+</html>

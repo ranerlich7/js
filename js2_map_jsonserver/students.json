@@ -1,0 +1,32 @@
+[
+    {
+        "name": "or",
+        "age": 25,
+        "email": "or@or.com",
+        "grades": [
+            89,
+            90,
+            99
+        ]
+    },
+    {
+        "name": "margalit",
+        "age": 24,
+        "email": "margalit@margalit.com",
+        "grades": [
+            89,
+            89,
+            100
+        ]
+    },
+    {
+        "name": "daniel",
+        "age": 22,
+        "email": "daniel@daniel.com",
+        "grades": [
+            99,
+            95,
+            100
+        ]
+    }
+]
