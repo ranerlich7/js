@@ -1,37 +1,70 @@
 {
-    "students": [
-        {
-            "id": 1,
-            "name": "or",
-            "age": 25,
-            "email": "or@or.com",
-            "grades": [
-                89,
-                90,
-                99
-            ]
-        },
-        {
-            "id": 2,
-            "name": "margalit",
-            "age": 24,
-            "email": "margalit@margalit.com",
-            "grades": [
-                89,
-                89,
-                100
-            ]
-        },
-        {
-            "id": 3,
-            "name": "daniel",
-            "age": 22,
-            "email": "daniel@daniel.com",
-            "grades": [
-                99,
-                95,
-                100
-            ]
-        }
-    ]
+  "students": [
+    {
+      "id": 1,
+      "name": "or",
+      "age": 25,
+      "email": "or@or.com",
+      "grades": [
+        89,
+        90,
+        99
+      ]
+    },
+    {
+      "id": 2,
+      "name": "margalit",
+      "age": 24,
+      "email": "margalit@margalit.com",
+      "grades": [
+        89,
+        89,
+        100
+      ]
+    },
+    {
+      "id": 3,
+      "name": "daniel",
+      "age": 22,
+      "email": "daniel@daniel.com",
+      "grades": [
+        99,
+        95,
+        100
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Adam",
+      "age": 22,
+      "email": "adam@adam.com",
+      "grades": [
+        99,
+        95,
+        100
+      ]
+    },
+    {
+      "name": "Binyamin",
+      "age": 25,
+      "email": "binyamin@binyamin.com",
+      "grades": [
+        90,
+        95,
+        99
+      ],
+      "id": 5
+    },
+    {
+      "name": "Binyamin",
+      "age": 25,
+      "email": "binyamin@binyamin.com",
+      "grades": [
+        90,
+        95,
+        99
+      ],
+      "id": 6
+    }
+  ]
 }
