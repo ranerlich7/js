@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <button onclick="addStudent()">Add student</button>
+    <script>
+        axios.get('http://localhost:3000/students').then(res => {
+            console.log(res.data);
+            const students = res.data
+        })
+        function addStudent() {
+
+            axios.post('http://localhost:3000/students',
+                {
+                    name: "Binyamin",
+                    age: 25,
+                    email: "binyamin@binyamin.com",
+                    grades: [
+                        90,
+                        95,
+                        99
+                    ]
+                })
+        }
+        function deleteStudent() {
+            axios.delete('http://localhost:3000/students/1')
+        }
+
+    </script>
+</body>
+
+</html>

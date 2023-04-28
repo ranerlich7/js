@@ -1,4 +1,10 @@
 {
+  "courses": [
+    {
+      "id": 1,
+      "name": "Python full stack"
+    }
+  ],
   "students": [
     {
       "id": 1,
@@ -9,17 +15,6 @@
         89,
         90,
         99
-      ]
-    },
-    {
-      "id": 2,
-      "name": "margalit",
-      "age": 24,
-      "email": "margalit@margalit.com",
-      "grades": [
-        89,
-        89,
-        100
       ]
     },
     {
@@ -65,6 +60,13 @@
         99
       ],
       "id": 6
+    },
+    {
+      "name": "ran",
+      "age": "44",
+      "email": "ran@ran.com",
+      "grades": "99,100,100",
+      "id": 7
     }
   ]
 }

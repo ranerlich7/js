@@ -14,7 +14,16 @@
 <body>
     <table id="studentTable" class="table table-sm table-dark">
     </table>
+    Student Name: <input id="studentName" placeholder="input student name">
+    <br>
+    Student Age:<input id="studentAge">
+    <br>
 
+    Student Email:<input id="studentEmail">
+    <br>
+    Student Grades:<input id="studentGrades">
+    <br>
+    <button onclick="addStudent()">Add student</button>
     <script>
         axios.get('http://localhost:3000/students').then(res => {
             console.log(res.data);
@@ -26,11 +35,31 @@
             <td>${student.age}</td>
             <td>${student.email}</td>
             <td>${student.grades}</td>
+            <td><button onclick="deleteStudent(${student.id})">Delete</button></td>
             </tr>`).join('');
-            studentTable.innerHTML = "<tr><th>Student</th><th>Age</th><th>Email</th><th>Grades</th></tr>" + resultHTML;
+            studentTable.innerHTML = "<tr><th>Student</th><th>Age</th><th>Email</th><th>Grades</th><th></th></tr>" + resultHTML;
 
         })
 
+        function addStudent() {
+            console.log('adding student');
+            newStudent = {
+                name: studentName.value, // this is the same as name: document.getElementById('studentName')
+                age: studentAge.value,
+                email: studentEmail.value,
+                grades: studentGrades.value,
+            }
+            // debugger
+            console.log(newStudent);
+            axios.post('http://localhost:3000/students', newStudent)
+
+        }
+
+        function deleteStudent(studentID) {
+            console.log('delete student', studentID);
+            // debugger
+            axios.delete(`http://localhost:3000/students/${studentID}`)
+        }
     </script>
 </body>
 
