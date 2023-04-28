@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+
+        async function getUserPost() {
+            resp = await axios.get('https://jsonplaceholder.typicode.com/posts/1')
+            console.log(resp);
+            resp2 = await axios.get('https://jsonplaceholder.typicode.com/users')
+            console.log(resp2);
+        }
+        getUserPost()
+    </script>
+</body>
+
+</html>
