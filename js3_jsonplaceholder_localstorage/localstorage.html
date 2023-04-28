@@ -11,14 +11,25 @@
 <body>
     userName<input id="username">
     <br>
+    color<input id="userColor">
+    <br>
     <button onclick="login()">Login</button>
     <div id="display"></div>
     <script>
         function login() {
+            if (username.value.length < 4) {
+                console.log('error in username');
+                return
+            }
             localStorage.setItem('user', username.value)
+            localStorage.setItem('color', userColor.value)
+            window.location.href = "nextPage.html";
+
         }
         curUser = localStorage.getItem('user')
-        display.innerText = `Hello ${curUser}`
+        curColor = localStorage.getItem('color')
+        display.innerHTML = `Hello ${curUser} your favorite color is 
+        <span style="color: ${curColor};">${curColor}</span>`
 
     </script>
 
